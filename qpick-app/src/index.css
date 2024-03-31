@@ -63,7 +63,13 @@ button:hover {
   text-align: center;
 }
 
-
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1110px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
 
 
 
@@ -88,7 +94,7 @@ button:hover {
   line-height: 30.48px;
   text-align: left;
   color: #101010;
-  padding: 20px;
+  padding: 20px 0px;
   margin: 0;
 }
 
@@ -140,6 +146,9 @@ button:hover {
 
 
 /* === APP BODY === */
+.merch-area {
+  margin-bottom: 20px;
+}
 
 .merch-area .merch-category-title {
   font-family: Montserrat;
@@ -159,10 +168,11 @@ footer {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: auto;
   padding: 30px;
   background-color: white;
-  border-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 
 footer h1 {
@@ -242,3 +252,44 @@ footer .socials-container a:hover img {
 }
 
 /* === FOOTER === */
+
+
+
+
+
+/* === MEDIA QUERIES === */
+/* Extra small devices (phones, 600px and down)  */
+@media only screen and (max-width: 600px) {
+  .cart-card-column {
+    min-width: none;
+    max-width: none;
+  }
+  .checkout-container {
+    flex:1;
+    min-width: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Devices below 1199px */
+@media only screen and (max-width: 1199px) {
+  .container {
+    max-width: none;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1110px;
+  }
+}
+/* === MEDIA QUERIES === */

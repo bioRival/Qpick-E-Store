@@ -16,9 +16,12 @@ export default function MerchCard(props) {
             </div>
             <div className="merch-first-line">
                 <h2 className="merch-name">{name}</h2>
-                <div className="price">{price} ₽
+                <div className="price">{price.toLocaleString('ru-RU')} ₽
                     {/* Crossed-out price at the bottom */}
-                    {salePrice !== null ? <p className='sale-price'>{salePrice} ₽</p> : ""}
+                    {salePrice !== null &&
+                        <p className='sale-price'>
+                            {salePrice.toLocaleString('ru-RU')} ₽
+                        </p>}
                 </div>
             </div>
             <div className="merch-second-line">

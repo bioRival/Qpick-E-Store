@@ -1,6 +1,6 @@
 .merch-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
   }
@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 330px;
+    width: 300px;
     height: 380px;
     padding: 20px;
     background-color: white;

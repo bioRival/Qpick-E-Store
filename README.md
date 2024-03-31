@@ -1,7 +1,7 @@
 # QPICK E STORE
 Frontend online store app developed using Vite + React JS. Learning project. Content is in Russian.
 ## How to run
-Download Node js [(official)](https://nodejs.org/en), then install it
+Download latest Node js [(official)](https://nodejs.org/en), then install it
 
 In code editor terminal run following commands:
 

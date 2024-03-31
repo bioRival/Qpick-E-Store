@@ -6,7 +6,7 @@ export default function CartCard(props) {
 
     const { id, name, price, salePrice, rating, category, img} = props.data;
 
-    const { cartItems, addToCart, removeFromCart } = useContext(ShopContext);
+    const { cartItems, addToCart, removeFromCart, clearFromCart } = useContext(ShopContext);
 
     return(
         <div className="cart-card">
@@ -30,7 +30,7 @@ export default function CartCard(props) {
                 
             </div>
             <div className="cart-card-right">
-                <button className="remove-button">
+                <button className="remove-button" onClick={() => clearFromCart(id)}>
                     <img src={trashCanIcon} alt="delete" />
                 </button>
                 <p>{price} ₽</p>

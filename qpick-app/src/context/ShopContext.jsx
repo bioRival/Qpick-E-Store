@@ -33,17 +33,25 @@ export default function ShopContextProvider(props) {
         return totalPrice;
     }
 
+    // Adds 1 item in cart
     function addToCart(itemId) {
         setCartItems(prev => ({...prev, [itemId]: prev[itemId] + 1}));
         setCartAmount(prev => prev + 1);
     }
 
+    // Removes 1 item from cart
     function removeFromCart(itemId) {
-        setCartItems(prev => ({...prev, [itemId]: prev[itemId] - 1}))
+        setCartItems(prev => ({...prev, [itemId]: prev[itemId] - 1}));
         setCartAmount(prev => prev - 1);
     }
 
-    const contextValue = {cartItems, cartAmount, addToCart, removeFromCart, getTotalPrice}
+    //Removes item from cart no matter the amount
+    function clearFromCart(itemId) {
+        setCartAmount(prev => prev - cartItems[itemId]);
+        setCartItems(prev => ({...prev, [itemId]: 0}));
+    }
+
+    const contextValue = {cartItems, cartAmount, addToCart, removeFromCart, clearFromCart, getTotalPrice}
 
     return (
         <ShopContext.Provider value={contextValue}>

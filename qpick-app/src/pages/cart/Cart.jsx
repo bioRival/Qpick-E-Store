@@ -8,7 +8,7 @@ import { useContext } from 'react';
 
 export default function Cart() {
 
-    const { cartItems } = useContext(ShopContext);
+    const { cartItems, getTotalPrice } = useContext(ShopContext);
 
     return (
     <div className="container">
@@ -26,7 +26,7 @@ export default function Cart() {
             <div className="checkout-container">
                 <div>
                     <p>ИТОГО</p>
-                    <p>₽ 2927</p>
+                    <p>₽ {getTotalPrice()}</p>
                 </div>
             <button className="checkout-button">Перейти к оформлению</button>
             </div>

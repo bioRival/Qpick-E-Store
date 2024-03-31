@@ -13,9 +13,13 @@ export default function CartCard(props) {
             <div className="cart-card-left">
                 <img src={img} alt="product picture" />
                 <div className="amount-counter">
-                    <button className="btn-amount"><span>+</span></button>
+                    <button className="btn-amount" onClick={() => addToCart(id)}>
+                        <span>+</span>
+                    </button>
                     <p className="item-amount">{cartItems[id]}</p>
-                    <button className="btn-amount"><span>-</span></button>
+                    <button className="btn-amount" onClick={() => removeFromCart(id)}>
+                        <span>-</span>
+                    </button>
                 </div>
             </div>
             <div className="cart-card-center">

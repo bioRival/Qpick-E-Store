@@ -2,10 +2,14 @@
 
 import favIcon from '../assets/img/fav.svg'
 import cartIcon from '../assets/img/cart.svg'
-
-import { Link } from 'react-router-dom'
+import { ShopContext } from '../context/ShopContext.jsx';
+import { useContext } from "react";
+import { Link } from 'react-router-dom';
 
 export default function Header() {
+
+    const { cartItems, cartAmount, addToCart, removeFromCart } = useContext(ShopContext);
+
     return(<header className="header">
         <Link to="/">
             <h1 className='logo'>QPICK</h1>
@@ -13,12 +17,12 @@ export default function Header() {
         </Link>
         <div className='right-btns-container'>
             <Link to="#">
-                <img className='icon-btn' value={0} src={favIcon} alt="cart-pic" />
+                <img className='icon-btn' src={favIcon} alt="cart-pic" />
                 <div className='counter-number'>0</div>
             </Link>
             <Link to="/cart">
-                <img className='icon-btn' value={0} src={cartIcon} alt="cart-pic" />
-                <div className='counter-number'>0</div>
+                <img className='icon-btn' src={cartIcon} alt="cart-pic" />
+                <div className='counter-number'>{cartAmount}</div>
             </Link>
         </div>
     </header>);

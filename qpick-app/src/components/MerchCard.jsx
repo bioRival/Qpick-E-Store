@@ -26,7 +26,8 @@ export default function MerchCard(props) {
             </div>
             <div className="merch-second-line">
                 <div style={{display: "flex", alignItems: "center", gap: 4}}>
-                    <img src={starIcon} alt="" /> <span className='merch-rating'>{rating}</span>
+                    <img src={starIcon} alt="" /> 
+                    <span className='merch-rating'>{rating}</span>
                 </div>
                 <button onClick={() => addToCart(id)}>
                     Купить {cartItems[id] > 0 && `(${cartItems[id]})`}

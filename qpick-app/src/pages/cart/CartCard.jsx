@@ -25,7 +25,7 @@ export default function CartCard(props) {
             <div className="cart-card-center">
                 <div>
                     <h3>{name}</h3>
-                    <p>{price} ₽</p>
+                    <p>{price.toLocaleString('RU-ru')} ₽</p>
                 </div>
                 
             </div>
@@ -33,7 +33,7 @@ export default function CartCard(props) {
                 <button className="remove-button" onClick={() => clearFromCart(id)}>
                     <img src={trashCanIcon} alt="delete" />
                 </button>
-                <p>{price} ₽</p>
+                <p>{(price * cartItems[id]).toLocaleString('RU-ru')} ₽</p>
             </div>
         </div>
     );

@@ -95,16 +95,20 @@
 .cart-card-left .btn-amount {
     position: relative;
     background-color: #FFCE7F;
-    border-radius: 50px;
-    height: 30px;
-    width: 30px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
 
+.cart-card-left .btn-amount:hover {
+    background-color: hsl(37, 100%, 65%);
+    border-color: transparent;
 }
 
 .cart-card-left .btn-amount span {
     position: absolute;
     top: 50%; left: 50%;
-    transform:translate(-50%,-90%);
+    transform:translate(-50%,-50%);
     
     color: white;
     font-size: 40px;
@@ -168,6 +172,7 @@
 
 .remove-button:hover {
     filter: brightness(1.2);
+    transform: scale(1.2);
 }
 
 /* === CART CARD === */

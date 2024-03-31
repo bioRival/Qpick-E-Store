@@ -30,7 +30,7 @@ export default function Cart() {
             <div className="checkout-container">
                 <div>
                     <p>ИТОГО</p>
-                    <p>₽ {getTotalPrice()}</p>
+                    <p>₽ {getTotalPrice().toLocaleString('RU-ru')}</p>
                 </div>
             <button className="checkout-button">Перейти к оформлению</button>
             </div>

@@ -1,13 +1,16 @@
 import starIcon from '../assets/img/star.svg'
 import './MerchCard.css'
 import { ShopContext } from '../context/ShopContext.jsx'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
+import FavButton from './FavButton.jsx';
 
 export default function MerchCard(props) {
 
     const { id, name, price, salePrice, rating, category, img} = props.data;
 
     const { cartItems, addToCart, removeFromCart } = useContext(ShopContext);
+
+
 
     return(
         <div className="merch-card">
@@ -33,7 +36,7 @@ export default function MerchCard(props) {
                     Купить {cartItems[id] > 0 && `(${cartItems[id]})`}
                 </button>
             </div>
-            
+            <FavButton/>
         </div>
     );
 }

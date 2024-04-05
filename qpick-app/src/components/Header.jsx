@@ -8,7 +8,13 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
 
-    const { cartItems, cartAmount, addToCart, removeFromCart } = useContext(ShopContext);
+    const { 
+        cartItems, 
+        cartAmount, 
+        addToCart, 
+        removeFromCart,
+        favAmount,
+    } = useContext(ShopContext);
 
     return(<header className="header">
         <Link to="/">
@@ -18,7 +24,7 @@ export default function Header() {
         <div className='right-btns-container'>
             <Link to="#">
                 <img className='icon-btn' src={favIcon} alt="cart-pic" />
-                <div className='counter-number'>0</div>
+                <div className='counter-number'>{favAmount}</div>
             </Link>
             <Link to="/cart">
                 <img className='icon-btn' src={cartIcon} alt="cart-pic" />

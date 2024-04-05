@@ -36,7 +36,7 @@ export default function MerchCard(props) {
                     Купить {cartItems[id] > 0 && `(${cartItems[id]})`}
                 </button>
             </div>
-            <FavButton/>
+            <FavButton itemId={id}/>
         </div>
     );
 }

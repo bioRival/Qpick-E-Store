@@ -13,12 +13,28 @@ function getDefaultCart() {
     return cart;
 }
 
+function getDefaultFav() {
+    let fav = {};
+    for (let i = 1; i < PRODUCTS.length + 1; i++) {
+        fav[i] = false;
+    }
+    return fav;
+}
+
 export default function ShopContextProvider(props) {
     // Array of amount of each item by id
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
+    // Array of items marked as favotire by id
+    const [favItems, setFavItems] = useState(getDefaultFav());
+
     // Total amount of all items in cart
     const [cartAmount, setCartAmount] = useState(0);
+
+    // Total amount of items marked as favorite
+    const [favAmount, setFavAmount] = useState(0);
+
+
 
     // Returns sum cost for all items in cart
     function getTotalPrice() {
@@ -51,7 +67,31 @@ export default function ShopContextProvider(props) {
         setCartItems(prev => ({...prev, [itemId]: 0}));
     }
 
-    const contextValue = {cartItems, cartAmount, addToCart, removeFromCart, clearFromCart, getTotalPrice}
+
+    // Marks item as favorite
+    function addToFav(itemId) {
+        setFavAmount(prev => prev + 1);
+        setFavItems(prev => ({...prev, [itemId]: true}));
+    }
+
+    // Removes item from favorites
+    function removeFromFav(itemId) {
+        setFavAmount(prev => prev - 1);
+        setFavItems(prev => ({...prev, [itemId]: false}));
+    }
+
+    const contextValue = {
+        cartItems, 
+        cartAmount, 
+        addToCart, 
+        removeFromCart, 
+        clearFromCart, 
+        getTotalPrice,
+        favItems,
+        addToFav,
+        removeFromFav,
+        favAmount,
+    }
 
     return (
         <ShopContext.Provider value={contextValue}>

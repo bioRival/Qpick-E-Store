@@ -1,7 +1,9 @@
-import globeIcon from '../assets/img/globe.svg'
-import VKIcon from '../assets/img/VK.svg'
-import TelegramIcon from '../assets/img/Telegram.svg'
-import WhatsappIcon from '../assets/img/Whatsapp.svg'
+
+// React-icons
+import { RiTelegramLine } from "react-icons/ri"
+import { SlSocialVkontakte } from "react-icons/sl"
+import { FaWhatsapp } from "react-icons/fa"
+import { CiGlobe } from "react-icons/ci"
 
 export default function Footer() {
 
@@ -16,15 +18,16 @@ export default function Footer() {
             <div>
                 <p>Условия сервиса</p>
                 <div className="language-switch-con">
-                    <img src={globeIcon} alt="globe icon" />
+                    <CiGlobe />
                     <a href="#" className='active'>Рус</a>
                     <a href="#">Eng</a>
                 </div>
             </div>
             <div className='socials-container'>
-                <a href="#"><img src={VKIcon} alt="vk" /></a>
-                <a href="#"><img src={TelegramIcon} alt="telegram" /></a>
-                <a href="#"><img src={WhatsappIcon} alt="whatsapp" /></a>
+                <a href="#"><SlSocialVkontakte /></a>
+                <a href="#"><RiTelegramLine /></a>
+                <a href="#"><FaWhatsapp /></a>
+                
             </div>
     
     

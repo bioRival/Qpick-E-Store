@@ -218,6 +218,11 @@ footer .language-switch-con {
   justify-content: space-around;
 }
 
+footer .language-switch-con svg {
+  color: gray;
+  font-size: 1.3rem;
+}
+
 footer .language-switch-con a {
   font-family: Montserrat;
   font-size: 15px;
@@ -243,11 +248,14 @@ footer .socials-container {
   height: 40px;
 }
 
-footer .socials-container a:hover img {
+footer .socials-container a {
+  color: black;
+  font-size: 2.2rem;
+
   transition: transform 0.25s ease;
 }
 
-footer .socials-container a:hover img {
+footer .socials-container a:hover {
   transform: scale(1.2);
 }
 

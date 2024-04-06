@@ -1,6 +1,8 @@
-import trashCanIcon from "../../assets/img/trashcan.svg";
 import { ShopContext } from '../../context/ShopContext.jsx';
 import { useContext } from "react";
+
+// React Icons
+import { TbTrashX } from "react-icons/tb";
 
 export default function CartCard(props) {
 
@@ -31,7 +33,7 @@ export default function CartCard(props) {
             </div>
             <div className="cart-card-right">
                 <button className="remove-button" onClick={() => clearFromCart(id)}>
-                    <img src={trashCanIcon} alt="delete" />
+                    <TbTrashX />
                 </button>
                 <p>{(price * cartItems[id]).toLocaleString('RU-ru')} ₽</p>
             </div>

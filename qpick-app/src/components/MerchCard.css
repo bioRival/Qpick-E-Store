@@ -78,6 +78,11 @@
   align-items: center;
 }
 
+.merch-card .merch-second-line svg {
+  color: #FFCE7F;
+  font-size: 28px;
+}
+
 .merch-card .merch-second-line .merch-rating {
   font-family: Montserrat;
   font-size: 17px;
@@ -93,9 +98,11 @@
   position: absolute;
   top: 7%;
   left: 90%;
+  font-size: 20px;
   border: none;
   transform: translate(-50%, -50%);
   color:hsl(0, 0%, 40%);
+  transition: all 0.1s ease;
 }
 
 .merch-card .fav-card-btn:hover {

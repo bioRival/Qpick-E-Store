@@ -168,10 +168,14 @@
 
 .remove-button {
     border-width: 0;
+    color: hsl(7, 75%, 46%);
+    font-size: 22px;
+    text-align: right;
+    padding: 5px;
 }
 
 .remove-button:hover {
-    filter: brightness(1.2);
+    color: hsl(7, 75%, 36%);
     transform: scale(1.2);
 }
 

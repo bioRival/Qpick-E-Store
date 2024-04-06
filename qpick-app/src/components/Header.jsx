@@ -1,10 +1,12 @@
-// Top navigation bar with - logo, favorite, cart
+// Top navigation bar with - logo, favorite tab, cart tab
 
-import favIcon from '../assets/img/fav.svg'
-import cartIcon from '../assets/img/cart.svg'
 import { ShopContext } from '../context/ShopContext.jsx';
 import { useContext } from "react";
 import { Link } from 'react-router-dom';
+
+// React icons
+import { RiShoppingCart2Line } from "react-icons/ri";
+import { FiHeart } from "react-icons/fi";
 
 export default function Header() {
 
@@ -23,11 +25,11 @@ export default function Header() {
         </Link>
         <div className='right-btns-container'>
             <Link to="#">
-                <img className='icon-btn' src={favIcon} alt="cart-pic" />
+                <FiHeart className='icon-btn' />
                 <div className='counter-number'>{favAmount}</div>
             </Link>
             <Link to="/cart">
-                <img className='icon-btn' src={cartIcon} alt="cart-pic" />
+                <RiShoppingCart2Line className='icon-btn'/>
                 <div className='counter-number'>{cartAmount}</div>
             </Link>
         </div>

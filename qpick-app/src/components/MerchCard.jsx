@@ -1,8 +1,10 @@
-import starIcon from '../assets/img/star.svg'
 import './MerchCard.css'
 import { ShopContext } from '../context/ShopContext.jsx'
 import { useContext, useState } from 'react';
 import FavButton from './FavButton.jsx';
+
+// React Icons
+import { MdStar } from "react-icons/md";
 
 export default function MerchCard(props) {
 
@@ -29,7 +31,7 @@ export default function MerchCard(props) {
             </div>
             <div className="merch-second-line">
                 <div style={{display: "flex", alignItems: "center", gap: 4}}>
-                    <img src={starIcon} alt="" /> 
+                    <MdStar />
                     <span className='merch-rating'>{rating}</span>
                 </div>
                 <button onClick={() => addToCart(id)}>

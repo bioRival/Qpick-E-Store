@@ -18,7 +18,7 @@ export default function CartCard(props) {
                     <button className="btn-amount" onClick={() => addToCart(id)}>
                         <span>+</span>
                     </button>
-                    <p className="item-amount">{cartItems[id]}</p>
+                    <p className="item-amount">{cartItems[id] && cartItems[id] }</p>
                     <button className="btn-amount" onClick={() => removeFromCart(id)}>
                         <span>-</span>
                     </button>

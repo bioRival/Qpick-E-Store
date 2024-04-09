@@ -35,7 +35,7 @@ export default function MerchCard(props) {
                     <span className='merch-rating'>{rating}</span>
                 </div>
                 <button onClick={() => addToCart(id)}>
-                    Купить {cartItems[id] > 0 && `(${cartItems[id]})`}
+                    Купить  {cartItems[id] > 0 && `(${cartItems[id]})`}
                 </button>
             </div>
             <FavButton itemId={id}/>

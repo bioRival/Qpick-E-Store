@@ -25,7 +25,7 @@ export default function Shop() {
             // All product cards of that category
             returnList.push(
                 <div className='merch-container'>
-                    {filteredProducts.map(product => <MerchCard data={product}/>)}
+                    {filteredProducts.map((product, id) => <MerchCard key={id} data={product}/>)}
                 </div>);
         }
         return returnList;

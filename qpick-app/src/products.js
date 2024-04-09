@@ -4,7 +4,7 @@ export const PRODUCTS = [
     
     // Наушники
     {
-        id: 1,
+        id: 99,
         name: "Apple BYZ S852I",
         price: 2927,
         salePrice: 3527,                           // Price before sale, if product is on sale

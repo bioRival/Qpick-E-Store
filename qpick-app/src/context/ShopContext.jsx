@@ -7,26 +7,26 @@ export const ShopContext = createContext();
 
 function getDefaultCart() {
     let cart = {};
-    for (let i = 1; i < PRODUCTS.length + 1; i++) {
-        cart[i] = 0;
-    }
+    PRODUCTS.forEach((item) => {
+        cart[item.id] = 0;
+    });
     return cart;
 }
 
 function getDefaultFav() {
     let fav = {};
-    for (let i = 1; i < PRODUCTS.length + 1; i++) {
-        fav[i] = false;
-    }
+    PRODUCTS.forEach((item) => {
+        fav[item.id] = false;
+    });
     return fav;
 }
 
 export default function ShopContextProvider(props) {
     // Array of amount of each item by id
-    const [cartItems, setCartItems] = useState(getDefaultCart());
+    const [cartItems, setCartItems] = useState(getDefaultCart);
 
     // Array of items marked as favotire by id
-    const [favItems, setFavItems] = useState(getDefaultFav());
+    const [favItems, setFavItems] = useState(getDefaultFav);
 
     // Total amount of all items in cart
     const [cartAmount, setCartAmount] = useState(0);

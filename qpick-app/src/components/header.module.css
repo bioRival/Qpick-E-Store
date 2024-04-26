@@ -1,0 +1,66 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+  
+.header .logo {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30.48px;
+    text-align: left;
+    color: #101010;
+    padding: 20px 0px;
+    margin: 0;
+}
+
+.header .rightBtnsContainer {
+    position: relative;
+}
+
+.header .iconBtn {
+    padding: none;
+    margin: 10px;
+    width: 30px;
+    transition: 0.25s ease;
+    border: none;
+    font-size: 1.7rem;
+    color:hsl(0, 0%, 50%);
+}
+
+.header a:hover .iconBtn {
+    filter: brightness(0.5);
+}
+
+.header a {
+position: relative;
+}
+
+.header a .counterNumber {
+    color:#fff;
+    font-size:80%;
+    line-height: 15px;
+    font-family: Montserrat;
+    text-align: center;
+    background-color: #FFA542;
+    position:absolute;
+    top:-70%;
+    left:80%;
+    width: 15px;
+    height: 15px;
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+
+    transition: 0.25s ease;
+}
+
+.header a:hover .counterNumber {
+    background-color: hsl(31, 100%, 53%);
+}

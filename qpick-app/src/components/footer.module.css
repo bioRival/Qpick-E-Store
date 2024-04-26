@@ -1,0 +1,95 @@
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: auto;
+    padding: 30px;
+    background-color: white;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.logo {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30.48px;
+    text-align: left;
+    color: #101010;
+    user-select: none;
+}
+
+ul {
+    list-style-type: none;
+
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20.72px;
+    text-align: left;
+    color: #000000;
+}
+
+li+li {
+    margin-top: 10px;
+}
+
+ul a {
+    color: #000000;
+    margin-top: 5px;
+}
+
+p {
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20.72px;
+    text-align: left;
+}
+
+.languageSwitchCon {
+    display: flex;
+    justify-content: space-around;
+}
+
+.languageSwitchCon svg {
+    color: gray;
+    font-size: 1.3rem;
+}
+
+.languageSwitchCon a {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.29px;
+    text-align: left;
+    color: hsl(0, 0%, 6%);
+}
+
+.languageSwitchCon a:hover {
+    color: hsl(0, 0%, 30%);
+}
+
+.languageSwitchCon a.active {
+    font-weight: 700;
+    color: #FFA542;
+}
+
+.socialsContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 40px;
+}
+
+.socialsContainer a {
+    color: black;
+    font-size: 2.2rem;
+
+    transition: transform 0.25s ease;
+}
+
+.socialsContainer a:hover {
+    transform: scale(1.2);
+}

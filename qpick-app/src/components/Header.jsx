@@ -3,6 +3,7 @@
 import { ShopContext } from '../context/ShopContext.jsx';
 import { useContext } from "react";
 import { Link } from 'react-router-dom';
+import styles from './header.module.css';
 
 // React icons
 import { RiShoppingCart2Line } from "react-icons/ri";
@@ -18,19 +19,19 @@ export default function Header() {
         favAmount,
     } = useContext(ShopContext);
 
-    return(<header className="header">
+    return(<header className={styles.header}>
         <Link to="/">
-            <h1 className='logo'>QPICK</h1>
+            <h1 className={styles.logo}>QPICK</h1>
 
         </Link>
-        <div className='right-btns-container'>
+        <div className={styles.rightBtnsContainer}>
             <Link to="#">
-                <FiHeart className='icon-btn' />
-                <div className='counter-number'>{favAmount}</div>
+                <FiHeart className={styles.iconBtn} />
+                <div className={styles.counterNumber}>{favAmount}</div>
             </Link>
             <Link to="/cart">
-                <RiShoppingCart2Line className='icon-btn'/>
-                <div className='counter-number'>{cartAmount}</div>
+                <RiShoppingCart2Line className={styles.iconBtn}/>
+                <div className={styles.counterNumber}>{cartAmount}</div>
             </Link>
         </div>
     </header>);

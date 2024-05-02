@@ -9,7 +9,7 @@ export const PRODUCTS = [
         price: 2927,
         salePrice: 3527,                           // Price before sale, if product is on sale
         rating: 4.7,
-        category: "headphone",
+        category: "headphones",
         img: "./src/assets/merch-pics/merch1.png",     // Path to image
     },
     {
@@ -18,7 +18,7 @@ export const PRODUCTS = [
         price: 2327,
         salePrice: null,                            // null if product is not on sale
         rating: 4.5,
-        category: "headphone",
+        category: "headphones",
         img: "./src/assets/merch-pics/merch2.png",
     },
     {
@@ -27,7 +27,7 @@ export const PRODUCTS = [
         price: 2327,
         salePrice: null,
         rating: 4.5,
-        category: "headphone",
+        category: "headphones",
         img: "./src/assets/merch-pics/merch3.png",
     },
     {
@@ -36,7 +36,7 @@ export const PRODUCTS = [
         price: 2927,
         salePrice: null,
         rating: 4.7,
-        category: "headphone",
+        category: "headphones",
         img: "./src/assets/merch-pics/merch1.png",
     },
     {
@@ -45,7 +45,7 @@ export const PRODUCTS = [
         price: 2327,
         salePrice: null,
         rating: 4.5,
-        category: "headphone",
+        category: "headphones",
         img: "./src/assets/merch-pics/merch2.png",
     },
     {
@@ -54,7 +54,7 @@ export const PRODUCTS = [
         price: 2327,
         salePrice: null,
         rating: 4.5,
-        category: "headphone",
+        category: "headphones",
         img: "./src/assets/merch-pics/merch3.png",
     },
 
@@ -65,7 +65,7 @@ export const PRODUCTS = [
         price: 9527,
         salePrice: null,
         rating: 4.5,
-        category: "wireless-headphone",
+        category: "wireless-headphones",
         img: "./src/assets/merch-pics/merch4.png",
     },
     {
@@ -74,7 +74,7 @@ export const PRODUCTS = [
         price: 6527,
         salePrice: null,
         rating: 4.7,
-        category: "wireless-headphone",
+        category: "wireless-headphones",
         img: "./src/assets/merch-pics/merch5.png",
     },
     {
@@ -83,7 +83,7 @@ export const PRODUCTS = [
         price: 7527,
         salePrice: null,
         rating: 4.7,
-        category: "wireless-headphone",
+        category: "wireless-headphones",
         img: "./src/assets/merch-pics/merch6.png",
     }
 ]

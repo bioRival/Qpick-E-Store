@@ -1,4 +1,4 @@
-import './MerchCard.css'
+import styles from './merchcard.module.css'
 import { ShopContext } from '../context/ShopContext.jsx'
 import { useContext, useState } from 'react';
 import FavButton from './FavButton.jsx';
@@ -15,24 +15,24 @@ export default function MerchCard(props) {
 
 
     return(
-        <div className="merch-card">
-            <div className="merch-img-container">
+        <div className={styles.merchCard}>
+            <div className={styles.imgContainer}>
                 <img src={img} alt="merch picture" />
             </div>
-            <div className="merch-first-line">
-                <h2 className="merch-name">{name}</h2>
-                <div className="price">{price.toLocaleString('ru-RU')} ₽
+            <div className={styles.firstLine}>
+                <h2 className={styles.name}>{name}</h2>
+                <div className={styles.price}>{price.toLocaleString('ru-RU')} ₽
                     {/* Crossed-out price at the bottom */}
                     {salePrice !== null &&
-                        <p className='sale-price'>
+                        <p className={styles.salePrice}>
                             {salePrice.toLocaleString('ru-RU')} ₽
                         </p>}
                 </div>
             </div>
-            <div className="merch-second-line">
+            <div className={styles.secondLine}>
                 <div style={{display: "flex", alignItems: "center", gap: 4}}>
                     <MdStar />
-                    <span className='merch-rating'>{rating}</span>
+                    <span className={styles.rating}>{rating}</span>
                 </div>
                 <button onClick={() => addToCart(id)}>
                     Купить  {cartItems[id] > 0 && `(${cartItems[id]})`}

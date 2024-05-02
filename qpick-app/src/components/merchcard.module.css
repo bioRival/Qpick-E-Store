@@ -1,0 +1,86 @@
+.merchCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 380px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.merchCard .imgContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.merchCard .imgContainer img {
+    width: 70%;
+}
+
+.merchCard .firstLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.merchCard .firstLine .name {
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20.72px;
+    text-align: left;
+    color: #1C1C27;
+}
+
+.merchCard .firstLine .price {
+    position: relative;
+
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20.72px;
+    text-align: left;
+    color: #FFA542;
+}
+
+.merchCard .firstLine .salePrice {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+
+
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15.85px;
+    text-align: left;
+    color: #FFCE7F;
+    text-wrap: nowrap;
+    text-decoration: line-through;
+}
+
+.merchCard .secondLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.merchCard .secondLine svg {
+    color: #FFCE7F;
+    font-size: 28px;
+}
+
+.merchCard .secondLine .rating {
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    color: #838383;
+}

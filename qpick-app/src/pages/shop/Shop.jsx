@@ -1,39 +1,20 @@
-import { PRODUCTS } from '../../products.js'
-import MerchCard from '../../components/MerchCard.jsx'
+import Categories from './components/Categories.jsx'
 
 export default function Shop() {
 
-    // Let's assume we got dictionary of categories out of DB
-    const categories = {
-        "headphone": "Наушники",
-        "wireless-headphone": "Безпроводные наушники",
-    };
-
-
-    // Filters cards to be under their respected category such as Наушники, Безпроводные наушники
-    // Sends HTML as output
-    function outputProducts() {
-
-        const returnList = [];
-        for (let category in categories) {
-
-            const filteredProducts = PRODUCTS.filter(product => product.category === category);
-
-            // Category title
-            returnList.push(<h2 className='merch-category-title'>{categories[category]}</h2>);
-            
-            // All product cards of that category
-            returnList.push(
-                <div className='merch-container'>
-                    {filteredProducts.map((product, id) => <MerchCard key={id} data={product}/>)}
-                </div>);
+    // Let's imagine we acquired categories from the database 
+    const categoryList = [
+        {
+            "id": 1,
+            "name": "headphones",
+            "nameRU": "Наушники"
+        },
+        {
+            "id": 2,
+            "name": "wireless-headphones",
+            "nameRU": "Беспроводные наушники"  
         }
-        return returnList;
-    }
+    ];
 
-    return (
-    <div className='merch-area'>
-        {outputProducts()}
-    </div>
-    );
+    return <Categories categoryList={categoryList}/>;
 }
